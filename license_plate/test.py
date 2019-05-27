@@ -55,7 +55,7 @@ def lp_detect() :
     parser.add_argument('--threaded', action='store_true', help='Put each frame on it\'s own thread')
     args = parser.parse_args()
 
-    alpr = Alpr("us", "/etc/openalpr/openalpr.conf", "/usr/share/openalpr/runtime_data")
+    alpr = Alpr("us", "./tx2.conf", "/usr/share/openalpr/runtime_data")
     if not alpr.is_loaded():
         print("Error loading OpenALPR")
         sys.exit(1)
